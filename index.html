@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Gokul L | Backend Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .skill-card,
+        .exp-card,
+        .project-card {
+            background: #0b1629;
+            padding: 24px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .exp-card:hover {
+            border-color: rgba(34, 211, 238, 0.4);
+        }
+    </style>
+</head>
+
+<body class="bg-[#050b14] text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-[#050b14]/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <h1 class="font-bold text-xl tracking-tighter text-cyan-400">
+                GOKUL<span class="text-white"> .L</span>
+            </h1>
+
+            <!-- Desktop Menu (UNCHANGED) -->
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                <a href="#home" class="hover:text-cyan-400">Home</a>
+                <a href="#summary" class="hover:text-cyan-400">Summary</a>
+                <a href="#skills" class="hover:text-cyan-400">Skills</a>
+                <a href="#experience" class="hover:text-cyan-400">Experience</a>
+                <a href="#projects" class="hover:text-cyan-400">Projects</a>
+                <a href="#contact" class="hover:text-cyan-400">Contact</a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="md:hidden text-cyan-400 text-xl" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-[#050b14] border-t border-white/10">
+            <div class="flex flex-col px-6 py-4 gap-4 text-gray-400 font-medium">
+                <a href="#home" onclick="closeMobileMenu()">Home</a>
+                <a href="#summary" onclick="closeMobileMenu()">Summary</a>
+                <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+                <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+                <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+                <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span
+                    class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-4">
+                    Available for Hire
+                </span>
+                <h2 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                    Backend <span class="text-cyan-400">Developer</span>
+                </h2>
+                <p class="text-gray-400 mt-6 text-lg max-w-xl leading-relaxed">
+                    Results-driven Backend Developer with 2+ years of experience building scalable,
+                    high-performance systems and RESTful APIs using Node.js and Laravel.
+                </p>
+                <div class="mt-8 flex items-center gap-6 flex-wrap">
+                    <a href="#experience"
+                        class="px-8 py-4 bg-cyan-500 text-black rounded-lg font-bold hover:bg-cyan-400 shadow-lg shadow-cyan-500/20">
+                        Explore Work
+                    </a>
+                    <div class="flex gap-4 text-2xl text-gray-400">
+                        <a href="https://github.com/Gokul2k1" target="_blank" class="hover:text-white"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/gokul-l-544045272/" target="_blank"
+                            class="hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative block md:block mt-10 md:mt-0">
+                <div class="absolute -inset-10 bg-cyan-500/10 blur-[120px] rounded-full"></div>
+                <img src="/MyPhoto.jpg" alt="Gokul L" class="relative rounded-2xl border border-white/10 shadow-2xl
+            w-full max-w-xs mx-auto md:max-w-full h-fit object-contain " />
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SUMMARY -->
+    <section id="summary" class="py-24 bg-[#070f1d]">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">Professional Summary</h2>
+            <p class="text-gray-400 text-lg leading-relaxed">
+                Results-driven and detail-oriented Backend Developer with 2+ years of experience building
+                and maintaining scalable, high-performance systems. Solid expertise in server-side logic,
+                RESTful API development, and database management. Self-motivated, disciplined, and effective
+                both independently and within cross-functional teams. Skilled at optimizing backend
+                performance and enhancing user experience through clean, efficient code. Fast learner with
+                strong communication skills and a passion for solving complex problems.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">Skills & Expertise</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="skill-card">
+                    <h4 class="text-xl font-bold mb-4">Key Skills</h4>
+                    <ul class="text-gray-400 space-y-2 text-sm">
+                        <li>Problem Solving & Debugging</li>
+                        <li>Backend Application Development</li>
+                        <li>MySQL Management</li>
+                        <li>Web Development</li>
+                        <li>API Development for Applications</li>
+                        <li>Query Optimization</li>
+                        <li>Unit Testing</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h4 class="text-xl font-bold mb-4">Programming & Tools</h4>
+                    <ul class="text-gray-400 space-y-2 text-sm">
+                        <li>JavaScript, Node.js, Express.js</li>
+                        <li>PHP, Laravel, Laravel Nova</li>
+                        <li>SQL, Postman, JSON</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h4 class="text-xl font-bold mb-4">Web & Database</h4>
+                    <ul class="text-gray-400 space-y-2 text-sm">
+                        <li>HTML5, CSS, JavaScript, Bootstrap</li>
+                        <li>MySQL, MongoDB</li>
+                        <li>Backend Application Architecture</li>
+                        <li>E-commerce & Business Logic Implementation</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-24 bg-[#070f1d]">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center">Professional Experience</h2>
+
+            <div class="exp-card mb-8">
+                <h3 class="text-2xl font-bold">Backend Developer – Soverg Pvt Ltd</h3>
+                <p class="text-cyan-400 mb-4">May 2024 – Present | Bengaluru</p>
+                <ul class="text-gray-400 space-y-2 text-sm">
+                    <li>Collaborated with cross-functional teams to build and maintain mobile applications</li>
+                    <li>Designed and developed scalable RESTful APIs using Laravel</li>
+                    <li>Executed secure backend workflows for end-to-end e-commerce operations</li>
+                    <li>Developed modular, maintainable, and high-performance backend components</li>
+                    <li>Integrated Laravel Nova for admin dashboards and monitoring</li>
+                    <li>Implemented user & admin approval workflows</li>
+                    <li>Developed invoice generation and order lifecycle management</li>
+                    <li>Integrated Razorpay payment gateway with webhook processing</li>
+                    <li>Implemented Aadhaar, PAN, GST KYC verification workflows</li>
+                    <li>Integrated Google Cloud Storage (GCS)</li>
+                    <li>Implemented Firebase Cloud Messaging (FCM)</li>
+                    <li>Improved system performance by 20–25%</li>
+                    <li>Improved operational efficiency by 17%</li>
+                </ul>
+            </div>
+
+            <div class="exp-card">
+                <h3 class="text-2xl font-bold">Software Trainee – Gully System</h3>
+                <p class="text-cyan-400 mb-4">Aug 2023 – Feb 2024 | Bengaluru</p>
+                <ul class="text-gray-400 space-y-2 text-sm">
+                    <li>Worked on Laravel projects using PHP & MySQL</li>
+                    <li>Partnered with senior developers to improve code quality</li>
+                    <li>Participated in code reviews and debugging sessions</li>
+                    <li>Learned Laravel framework and web development best practices</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">Key Development Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="project-card">
+                    <h4 class="text-xl font-bold mb-2">Music Player</h4>
+                    <p class="text-gray-400 text-sm">
+                        React-based music player with responsive UI, artist search, and track loading.
+                    </p>
+                    <p><a href="https://github.com/Gokul2k1/Music-Player" class="link-opacity-10-hover text-xs text-blue-600" target="_blank">Check here.</a></p>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="text-xl font-bold mb-2">Job Portal API</h4>
+                    <p class="text-gray-400 text-sm">
+                        JWT-based authentication system with user/admin roles, job creation,
+                        management, and job application flow.
+                    </p>
+                    <p><a href="https://github.com/Gokul2k1/Job-Api" class="link-opacity-10-hover text-xs text-blue-600" target="_blank">Check here.</a></p>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="text-xl font-bold mb-2">E-commerce APIs</h4>
+                    <p class="text-gray-400 text-sm">
+                        Complete backend system for user registration, product management,
+                        cart, orders, inventory, and approvals.
+                    </p>
+                    <p><a href="https://github.com/Gokul2k1/my-rest-api" class="link-opacity-10-hover text-xs text-blue-600" target="_blank">Check here.</a></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT + EDUCATION -->
+    <section id="contact" class="py-24 bg-[#070f1d]">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Contact</h2>
+                <p class="text-gray-400">📞 +91 7676680380</p>
+                <p class="text-gray-400">📧 gokul2222k1@gmail.com</p>
+                <p class="text-gray-400">📍 Bengaluru, India</p>
+                <p class="text-gray-400"><a href="https://github.com/Gokul2k1?tab=overview&from=2025-12-01&to=2025-12-30">🔗 GitHub: Gokul2k1</a></p>
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Education</h2>
+                <p class="text-gray-400 font-semibold">Bachelor of Computer Application (BCA)</p>
+                <p class="text-gray-400">Om Sai Degree College | 2019 – 2022</p>
+                <p class="text-gray-400 mb-4">CGPA: 8.32</p>
+
+                <p class="text-gray-400 font-semibold">PUC</p>
+                <p class="text-gray-400">Om Sai Degree College | 2017 – 2019</p>
+                <p class="text-gray-400">72%</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center border-t border-white/5 text-gray-500 text-sm">
+        © 2026 Gokul L. Solving today’s problems with tomorrow’s systems...
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById("mobileMenu").classList.toggle("hidden");
+        }
+
+        function closeMobileMenu() {
+            document.getElementById("mobileMenu").classList.add("hidden");
+        }
+    </script>
+
+
+</body>
+
+</html>
